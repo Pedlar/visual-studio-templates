@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>EBus Component</Title>
+      <Author />
+      <Description>A EBus Component Header</Description>
+      <HelpUrl />
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut>ebuscomp</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Namespace</ID>
+          <Type />
+          <ToolTip />
+          <Default>Namespace</Default>
+          <Function />
+        </Literal>
+        <Literal Editable="true">
+          <ID>ClassName</ID>
+          <Type />
+          <ToolTip />
+          <Default>ClassName</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="CPP"><![CDATA[#pragma once
+
+#include <AzCore\Component\Component.h>
+
+namespace $Namespace$ {
+    class  $ClassName$
+        : public AZ::ComponentBus {
+    public:
+
+    };
+
+    using $ClassName$Bus = AZ::EBus<$ClassName$>;
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

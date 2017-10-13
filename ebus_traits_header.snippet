@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>EBus Traits</Title>
+      <Author />
+      <Description>EBus Trats Header File</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut>ebustraits</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Namespace</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>Namespace</Default>
+          <Function></Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>ClassName</ID>
+          <Type></Type>
+          <ToolTip></ToolTip>
+          <Default>ClassName</Default>
+          <Function></Function>
+        </Literal>
+      </Declarations>
+      <Code Language="CPP"><![CDATA[#pragma once
+#include "AzCore\EBus\EBus.h"
+ 
+namespace $Namespace$ {
+    class $ClassName$
+        : public AZ::EBusTraits {
+    public:
+        
+    };
+ 
+    using $ClassName$Bus = AZ::EBus<$ClassName$>;
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

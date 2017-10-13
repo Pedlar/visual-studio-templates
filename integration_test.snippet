@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Integration Test</Title>
+      <Author />
+      <Description>A Integration Test</Description>
+      <HelpUrl />
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut>integt</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>ClassName</ID>
+          <Type />
+          <ToolTip />
+          <Default>ClassName</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="CPP">
+  <![CDATA[#include "StdAfx.h"
+
+#include <AzTest\AzTest.h>
+
+class Integ_$ClassName$Tests
+    : public ::testing::Test {
+public:
+
+    virtual void SetUp() {
+
+    }
+
+    Integ_$ClassName$Tests() {
+
+    }
+
+    ~Integ_$ClassName$Tests() {
+
+    }
+};
+
+TEST_F(Integ_$ClassName$Tests, $ClassName$_Smoke) {
+
+}
+
+AZ_INTEG_TEST_HOOK();]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

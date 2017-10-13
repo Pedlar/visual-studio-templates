@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Base Component</Title>
+      <Author />
+      <Description>Base Lumberyard Component</Description>
+      <HelpUrl></HelpUrl>
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut>compc</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>ClassName</ID>
+          <Type />
+          <ToolTip />
+          <Default>ClassName</Default>
+          <Function />
+        </Literal>
+        <Literal Editable="true">
+          <ID>Namespace</ID>
+          <Type />
+          <ToolTip />
+          <Default>Namespace</Default>
+          <Function />
+        </Literal>
+        <Literal Editable="true">
+          <ID>Description</ID>
+          <Type />
+          <ToolTip />
+          <Default>Description</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="CPP">
+        <![CDATA[#include "StdAfx.h"
+#include "$ClassName$.h"
+#include "AzCore\Serialization\EditContext.h"
+#include "AzCore\Math\Transform.h"
+#include "AzCore\Component\TransformBus.h"
+
+using namespace $Namespace$;
+
+void $ClassName$::Reflect(AZ::ReflectContext* reflection) {
+    if (auto serializationContext = azrtti_cast<AZ::SerializeContext*>(reflection)) {
+        serializationContext->Class<$ClassName$>()
+            ->Version(1);
+
+        if (auto editContext = serializationContext->GetEditContext()) {
+            editContext->Class<$ClassName$>("$ClassName$", "$Description$")
+                ->ClassElement(AZ::Edit::ClassElements::EditorData, "")
+                ->Attribute(AZ::Edit::Attributes::Category, "$Namespace$")
+                ->Attribute(AZ::Edit::Attributes::AppearsInAddComponentMenu, AZ_CRC("Game"));
+        }
+    }
+}
+
+void $ClassName$::Init() {
+
+}
+
+void $ClassName$::Activate() {
+
+}
+
+void $ClassName$::Deactivate() {
+
+}]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

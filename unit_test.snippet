@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Unit Test</Title>
+      <Author />
+      <Description>A Unit Test</Description>
+      <HelpUrl />
+      <SnippetTypes />
+      <Keywords />
+      <Shortcut>unitt</Shortcut>
+    </Header>
+    <Snippet>
+      <References />
+      <Imports />
+      <Declarations>
+        <Literal Editable="true">
+          <ID>ClassName</ID>
+          <Type />
+          <ToolTip />
+          <Default>ClassName</Default>
+          <Function />
+        </Literal>
+      </Declarations>
+      <Code Language="CPP"><![CDATA[#include "StdAfx.h"
+
+#include <AzTest\AzTest.h>
+
+class  $ClassName$Tests
+    : public ::testing::Test {
+public:
+
+    virtual void SetUp() {
+
+    }
+
+    $ClassName$Tests() {
+
+    }
+
+    ~$ClassName$Tests() {
+
+    }
+};
+
+TEST_F($ClassName$Tests, $ClassName$_First) {
+
+}
+
+AZ_UNIT_TEST_HOOK();]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
